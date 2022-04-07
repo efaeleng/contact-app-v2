@@ -3,12 +3,10 @@ import ContactCards from './ContactCards'
 import {useEffect, useState} from 'react'
 
 const App = () => {
-  // const url = 'https://randomuser.me/api/'
-  const url = "https://random-data-api.com/api/users/random_user?size=10"
-  const { data } = useFetch(url)
+  const url = 'https://randomuser.me/api/'
+  const { data } = useFetch(url+'?results=200')
   const [contactList, setContactList] = useState()
   const [filterQuery, setFilterQuery] = useState()
-  console.log( data )
 
   useEffect(() => {
     if (!filterQuery) {
