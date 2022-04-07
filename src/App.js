@@ -2,6 +2,7 @@ import useFetch from 'react-fetch-hook'
 import ContactCards from './ContactCards'
 import {useEffect, useState} from 'react'
 
+
 const App = () => {
   const url = 'https://randomuser.me/api/'
   const { data } = useFetch(url+'?results=200')
@@ -14,7 +15,7 @@ const App = () => {
     } else {
       const queryString = filterQuery.toLowerCase()
       const filteredData = data?.results?.filter(contact => {
-        const fullName = `${contact.first_name} ${contact.last_name}`
+        const fullName = `${contact.name.first} ${contact.name.last}`
 
         // if it's just one letter, return all names that start with it
         if (queryString.length === 1) {
@@ -52,6 +53,9 @@ const App = () => {
 }
 
 export default App
+
+
+
 
 
 

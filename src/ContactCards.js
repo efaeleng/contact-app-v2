@@ -6,16 +6,16 @@ const ContactCards = ({ contactList }) => {
           <img alt="user" className="w-32 h-32 rounded-full mx-auto mt-7" src={contact.avatar} />
           <figcaption className="text-center mt-5">
             <p className="text-gray-700 font-semibold text-xl mb-2">
-              {contact.first_name} {contact.last_name}
+              {contact.name.first} {contact.name.last}
             </p>
             <p className="text-gray-500">
               <span className="font-medium">email: </span>{contact.email}
             </p>
             <p className="text-gray-500">
-              <span className="font-medium">phone: </span>{contact.Phone_number}
+              <span className="font-medium">phone: </span>{contact.cell}
             </p>
             <p className="text-gray-500">
-              <span className="font-medium">city: </span>{contact.address.city}
+              <span className="font-medium">city: </span>{contact.location.city}
             </p>
           </figcaption>
         </figure>
