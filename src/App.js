@@ -31,7 +31,7 @@ const App = () => {
   }, [data, filterQuery])
 
   return (
-    <div className={"bg-gray-100"}>
+    <div className={"bg-[#588BAE]"}>
       <section>
         <form>
           <input
@@ -44,7 +44,7 @@ const App = () => {
       </section>
       <section className={"grid sm:grid-cols-2 md:grid-cols-4 gap-6 p-20"}>
         {contactList?.length < 1 && (
-          <h1>No data matches your search</h1>
+          <h1 className='text-red-600 font-semibold'>No data matches your search</h1>
         )}
         <ContactCards contactList={contactList}/>
       </section>
